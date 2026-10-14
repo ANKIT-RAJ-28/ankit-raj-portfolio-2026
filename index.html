@@ -24,7 +24,7 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #0b0f19; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: #0b0f19; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; min-height: 100vh; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
@@ -37,13 +37,14 @@
             <span>ANKIT RAJ</span>
             <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded border border-blue-500/30">AI PM</span>
         </div>
-        <div class="hidden md:flex space-x-6 text-sm font-medium text-textMuted uppercase tracking-wider">
+        <div class="hidden md:flex space-x-3 text-xs font-medium text-textMuted uppercase tracking-wider">
             <button onclick="switchTab('home')" class="nav-btn hover:text-white transition text-white font-bold">Home</button>
+            <button onclick="switchTab('skills')" class="nav-btn hover:text-white transition">PM Skills</button>
             <button onclick="switchTab('about')" class="nav-btn hover:text-white transition">About</button>
             <button onclick="switchTab('work')" class="nav-btn hover:text-white transition">Case Studies</button>
             <button onclick="switchTab('experience')" class="nav-btn hover:text-white transition">Experience</button>
             <button onclick="switchTab('impact')" class="nav-btn hover:text-white transition">Impact</button>
-            <button onclick="switchTab('beyond')" class="nav-btn hover:text-white transition">Beyond Work</button>
+            <button onclick="switchTab('certifications')" class="nav-btn hover:text-white transition">Certifications</button>
             <button onclick="switchTab('contact')" class="nav-btn hover:text-white transition">Contact</button>
         </div>
         <div class="flex items-center space-x-3">
@@ -59,18 +60,18 @@
     <main class="pt-28 pb-20 px-6 max-w-7xl mx-auto min-h-screen">
 
         <!-- TAB 1: HOME SECTION -->
-        <section id="tab-home" class="tab-content min-h-[80vh] flex flex-col justify-center">
+        <section id="tab-home" class="tab-content min-h-[80vh] flex flex-col justify-center py-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6">
                     <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full text-blue-400 text-xs font-semibold tracking-wider">
                         <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                        <span>AVAILABLE FOR AI PRODUCT ROLES</span>
+                        <span>TARGETING AI PRODUCT MANAGER ROLES (BANGALORE / INDIA)</span>
                     </div>
                     <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                        BUILDING <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">SCALABLE, MEASURABLE</span> AI PLATFORMS.
+                        BUILDING <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">SCALABLE, ENTERPRISE-GRADE</span> AI PLATFORMS.
                     </h1>
                     <p class="text-textMuted text-lg max-w-2xl leading-relaxed">
-                        Accomplished AI Product Manager with over 11.5 years of experience leading enterprise-level AI transformations, multi-agent orchestrations, and optimization engines. Bridging strategic business priorities with generative AI architectures and deterministic mathematical models.
+                        Accomplished AI Product Manager with 11.5+ years of strategic execution and 13+ years of total domain depth. Proven track record of spearheading multi-agent LLM orchestrations (LangGraph, Claude 3.5), combinatorial optimization engines, and zero-trust security platforms that deliver measurable multi-million dollar business value.
                     </p>
                     <div class="flex flex-wrap gap-4 pt-2">
                         <button onclick="switchTab('work')" class="bg-white text-darkBg hover:bg-slate-200 font-bold px-6 py-3 rounded-xl transition shadow-xl">Explore Case Studies</button>
@@ -83,15 +84,15 @@
                     <div class="grid grid-cols-3 gap-4 pt-4 max-w-md border-t border-slate-800">
                         <div>
                             <span class="text-2xl font-extrabold text-white block">11.5+</span>
-                            <span class="text-xs text-textMuted font-medium">Years Experience</span>
+                            <span class="text-xs text-textMuted font-medium">Core AI/PM Exp.</span>
                         </div>
                         <div>
-                            <span class="text-2xl font-extrabold text-white block">3+</span>
+                            <span class="text-2xl font-extrabold text-white block">4</span>
                             <span class="text-xs text-textMuted font-medium">Enterprise Roles</span>
                         </div>
                         <div>
-                            <span class="text-2xl font-extrabold text-white block">4+</span>
-                            <span class="text-xs text-textMuted font-medium">Live AI Platforms</span>
+                            <span class="text-2xl font-extrabold text-white block">€1B+</span>
+                            <span class="text-xs text-textMuted font-medium">Budgets Optimized</span>
                         </div>
                     </div>
                 </div>
@@ -103,44 +104,96 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-darkBg/90 via-transparent to-transparent"></div>
                         <div class="absolute bottom-4 left-4 right-4">
                             <p class="text-white font-bold text-lg">Ankit Raj</p>
-                            <p class="text-blue-400 text-xs font-semibold"> AI Product Manager @ Stellantis</p>
+                            <p class="text-blue-400 text-xs font-semibold">AI Product Manager @ Stellantis</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 2: ABOUT / CAPABILITIES SECTION -->
-        <section id="tab-about" class="tab-content hidden space-y-12 py-10">
+        <!-- TAB 2: PM SKILLS & DOMAIN BENTO GRID -->
+        <section id="tab-skills" class="tab-content hidden space-y-8 py-10">
             <div>
-                <p class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">Capabilities</p>
-                <h2 class="text-3xl font-bold text-white">About & Core Expertise</h2>
+                <p class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">COMPETENCIES & STACK</p>
+                <h2 class="text-3xl font-bold text-white">AI Product Management & Technical Skills</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition">
-                    <div class="text-blue-400 text-2xl mb-4"><i class="fas fa-network-wired"></i></div>
-                    <h4 class="text-xl font-bold text-white mb-2">Agentic AI & LLM Orchestration</h4>
-                    <p class="text-textMuted text-sm leading-relaxed">Expertise in multi-agent architectures using LangGraph, Claude 3.5 Sonnet, and AWS Bedrock. Transforming probabilistic ML models into deterministic enterprise solutions via RAG and strict CI/CD governance.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. Original Block 1 -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3">
+                    <div class="text-blue-400 text-xl"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="text-lg font-bold text-white">AI Product Strategy & Execution</h3>
+                    <p class="text-textMuted text-xs leading-relaxed">PDLC • Roadmapping • PRD & FRD Creation • RICE Prioritization • User Stories & Acceptance Criteria • Agile Scrum Leadership • Cross-functional Stakeholder Alignment • Go-To-Market Strategy.</p>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition">
-                    <div class="text-blue-400 text-2xl mb-4"><i class="fas fa-calculator"></i></div>
-                    <h4 class="text-xl font-bold text-white mb-2">Operational Research & Mathematics</h4>
-                    <p class="text-textMuted text-sm leading-relaxed">Fusing Generative AI with deterministic Mixed-Integer Programming (MIP), UMAP Dimensionality Reduction, and HDBSCAN Density Clustering to solve extreme enterprise complexities.</p>
+
+                <!-- 2. Original Block 2 -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3">
+                    <div class="text-blue-400 text-xl"><i class="fas fa-brain"></i></div>
+                    <h3 class="text-lg font-bold text-white">GenAI & LLM Orchestration</h3>
+                    <p class="text-textMuted text-xs leading-relaxed">LangGraph Multi-Agent Workflows • Claude 3.5 Sonnet • RAG Pipelines • ReAct Natural Language-to-SQL Routing • Token Cost Optimization (FinOps) • Hallucination Defense & Guardrails.</p>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition">
-                    <div class="text-blue-400 text-2xl mb-4"><i class="fas fa-chart-line"></i></div>
-                    <h4 class="text-xl font-bold text-white mb-2">Measurable Business Impact</h4>
-                    <p class="text-textMuted text-sm leading-relaxed">Track record of driving structural cost reductions (up to 4.5% on €1B+ logistics spend) and neutralizing massive enterprise liabilities ($180M+ warranty exposure) through algorithmic optimization.</p>
+
+                <!-- 3. Original Block 3 -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3">
+                    <div class="text-blue-400 text-xl"><i class="fas fa-cogs"></i></div>
+                    <h3 class="text-lg font-bold text-white">Data Infrastructure & Tools</h3>
+                    <p class="text-textMuted text-xs leading-relaxed">Databricks (Unity Catalog, Delta Lake) • Palantir Foundry • Snowflake • Apache Airflow • Python • Advanced SQL • Power BI Dashboards • Tableau • Jira • Confluence • Figma.</p>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition">
-                    <div class="text-blue-400 text-2xl mb-4"><i class="fas fa-database"></i></div>
-                    <h4 class="text-xl font-bold text-white mb-2">Technical & Analytical Stack</h4>
-                    <p class="text-textMuted text-sm leading-relaxed">Fluency in Databricks (Unity Catalog, Delta Lake), Palantir Foundry, Snowflake, Apache Airflow, Python, and SQL.</p>
+
+                <!-- 4. Original Block 4 -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3">
+                    <div class="text-blue-400 text-xl"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-lg font-bold text-white">Enterprise Governance & Security</h3>
+                    <p class="text-textMuted text-xs leading-relaxed">Zero-Trust Security Models • Service Principal Access (SP-Only) • SOC Compliance • Automated CI/CD Evaluation Gates • GDPR & Data Privacy Standards • Risk Mitigation.</p>
+                </div>
+
+                <!-- 5. Replaced Block 1 (Product Design & Sense, PMF, Execution Strategy) -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3">
+                    <div class="text-blue-400 text-xl"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="text-lg font-bold text-white">Product Design, Sense & PMF</h3>
+                    <p class="text-textMuted text-xs leading-relaxed">Zero-to-one conceptualization of AI solutions, translating complex enterprise friction points into intuitive user journeys, split-screen RAG validation interfaces, market segmentation, and defining unique value propositions.</p>
+                </div>
+
+                <!-- 6. Replaced Block 2 (User Acquisition, Retention, Analytics & Monetization) -->
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-2xl space-y-3">
+                    <div class="text-blue-400 text-xl"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-lg font-bold text-white">Analytics, Growth & Monetization</h3>
+                    <p class="text-textMuted text-xs leading-relaxed">User acquisition & onboarding workflows, sticky retention mechanisms, real-time telemetry analytics, tracking operational KPIs, token cost optimization, and aligning features with P&L impact (€1B+ cost reductions).</p>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 3: CASE STUDIES (HORIZONTAL SLIDER) -->
+        <!-- TAB 3: ABOUT / CAPABILITIES SECTION -->
+        <section id="tab-about" class="tab-content hidden space-y-12 py-10">
+            <div>
+                <p class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">EXECUTIVE SUMMARY</p>
+                <h2 class="text-3xl font-bold text-white">Why Recruiters Trust Ankit Raj for AI PM Roles</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition space-y-3">
+                    <div class="text-blue-400 text-2xl"><i class="fas fa-chess-queen"></i></div>
+                    <h4 class="text-xl font-bold text-white">Strategic AI Vision & Execution</h4>
+                    <p class="text-textMuted text-sm leading-relaxed">I turn complex business bottlenecks into automated, high-margin AI platforms. Having managed €1B+ logistics networks and $180M+ quality liability exposures, I align AI R&D directly with corporate P&L impact.</p>
+                </div>
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition space-y-3">
+                    <div class="text-blue-400 text-2xl"><i class="fas fa-microchip"></i></div>
+                    <h4 class="text-xl font-bold text-white">Deep Technical Fluency</h4>
+                    <p class="text-textMuted text-sm leading-relaxed">Unlike traditional PMs, I architect multi-agent LangGraph flows, define MIP mathematical optimization constraints, configure Databricks zero-trust security, and review production-grade Python code.</p>
+                </div>
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition space-y-3">
+                    <div class="text-blue-400 text-2xl"><i class="fas fa-balance-scale"></i></div>
+                    <h4 class="text-xl font-bold text-white">Deterministic Governance & Safety</h4>
+                    <p class="text-textMuted text-sm leading-relaxed">I build 'controlled AI' systems. By coupling probabilistic LLMs with strict Python validation gateways and human-in-the-loop audit trails, I ensure 100% regulatory and clinical compliance.</p>
+                </div>
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition space-y-3">
+                    <div class="text-blue-400 text-2xl"><i class="fas fa-users-cog"></i></div>
+                    <h4 class="text-xl font-bold text-white">Cross-Functional Leadership</h4>
+                    <p class="text-textMuted text-sm leading-relaxed">Skilled in leading distributed global engineering squads, aligning C-suite executives, and breaking down organizational silos to ship enterprise software at high velocity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: CASE STUDIES (HORIZONTAL SLIDER) -->
         <section id="tab-work" class="tab-content hidden space-y-8 py-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between">
                 <div>
@@ -153,7 +206,7 @@
             <!-- Horizontal Slider Container -->
             <div class="flex overflow-x-auto space-x-6 pb-6 no-scrollbar snap-x snap-mandatory pt-4">
                 
-                <!-- Project 1: Optima Inbound Agents -->
+                <!-- Project 1 -->
                 <div class="min-w-[320px] sm:min-w-[520px] bg-cardBg border border-slate-800 p-8 rounded-2xl snap-start flex flex-col justify-between shadow-xl">
                     <div>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -165,11 +218,11 @@
                         <div class="space-y-4 text-sm text-textMuted">
                             <div>
                                 <strong class="text-white block mb-1">PROBLEM:</strong>
-                                <p>An 8-week legacy logistics planning cycle forced a €1 billion transport network to run on stale data and manual spreadsheets, leading to massive capital bleed via deadhead miles.</p>
+                                <p>An 8-week legacy logistics planning cycle forced a €1 billion transport network to run on stale data and manual spreadsheets, leading to deadhead miles.</p>
                             </div>
                             <div>
                                 <strong class="text-white block mb-1">PRODUCT THINKING:</strong>
-                                <p>Democratize operational research. Use deterministic MIP solvers for route math, and deploy a multi-agent Generative AI orchestrator as a cognitive read-engine over the results.</p>
+                                <p>Democratize operational research. Use deterministic MIP solvers for route math, and deploy a multi-agent Generative AI orchestrator as a cognitive read-engine over results.</p>
                             </div>
                             <div>
                                 <strong class="text-white block mb-1">IMPACT:</strong>
@@ -184,7 +237,7 @@
                     <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-blue-400 font-semibold">Stellantis • Enterprise Logistics</div>
                 </div>
 
-                <!-- Project 2: Warranty Claims Clustering -->
+                <!-- Project 2 -->
                 <div class="min-w-[320px] sm:min-w-[520px] bg-cardBg border border-slate-800 p-8 rounded-2xl snap-start flex flex-col justify-between shadow-xl">
                     <div>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -196,7 +249,7 @@
                         <div class="space-y-4 text-sm text-textMuted">
                             <div>
                                 <strong class="text-white block mb-1">PROBLEM:</strong>
-                                <p>17,300+ unclassified daily multi-lingual claims overwhelmed analysts, causing a 90-120 day defect detection lag and compounding into a $180M+ annual liability.</p>
+                                <p>17,300+ unclassified daily multi-lingual claims overwhelmed analysts, causing a 90-120 day defect detection lag and compounding into a $180M+ liability.</p>
                             </div>
                             <div>
                                 <strong class="text-white block mb-1">PRODUCT THINKING:</strong>
@@ -215,7 +268,7 @@
                     <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-blue-400 font-semibold">Stellantis • Automotive Quality</div>
                 </div>
 
-                <!-- Project 3: Clinical Automation -->
+                <!-- Project 3 -->
                 <div class="min-w-[320px] sm:min-w-[520px] bg-cardBg border border-slate-800 p-8 rounded-2xl snap-start flex flex-col justify-between shadow-xl">
                     <div>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -227,11 +280,11 @@
                         <div class="space-y-4 text-sm text-textMuted">
                             <div>
                                 <strong class="text-white block mb-1">PROBLEM:</strong>
-                                <p>Manually transcribing complex 500-page clinical trial protocol PDFs into structured EHR ordersets took days, burdening medical staff and carrying massive liability risks.</p>
+                                <p>Manually transcribing complex 500-page clinical trial protocol PDFs into structured EHR ordersets took days, burdening medical staff.</p>
                             </div>
                             <div>
                                 <strong class="text-white block mb-1">PRODUCT THINKING:</strong>
-                                <p>Controlled automation. AI acts exclusively as a drafting and flagging assistant, not an autonomous decider. Couple probabilistic LLM extraction with deterministic validation rules.</p>
+                                <p>Controlled automation. AI acts as a drafting and flagging assistant, not an autonomous decider. Couple probabilistic LLM extraction with deterministic validation rules.</p>
                             </div>
                             <div>
                                 <strong class="text-white block mb-1">IMPACT:</strong>
@@ -246,7 +299,7 @@
                     <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-blue-400 font-semibold">L&amp;T • Healthcare &amp; Pharma</div>
                 </div>
 
-                <!-- Project 4: Yield Curve Cleansing -->
+                <!-- Project 4 -->
                 <div class="min-w-[320px] sm:min-w-[520px] bg-cardBg border border-slate-800 p-8 rounded-2xl snap-start flex flex-col justify-between shadow-xl">
                     <div>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -258,11 +311,11 @@
                         <div class="space-y-4 text-sm text-textMuted">
                             <div>
                                 <strong class="text-white block mb-1">PROBLEM:</strong>
-                                <p>Valuations required cleansing 180+ multi-vendor yield curves under strict hourly deadlines (1 PM - 5 PM). Legacy macro tools caused severe latency and lacked audit trails.</p>
+                                <p>Valuations required cleansing 180+ multi-vendor yield curves under strict hourly deadlines (1 PM - 5 PM). Legacy tools caused latency and lacked audit trails.</p>
                             </div>
                             <div>
                                 <strong class="text-white block mb-1">PRODUCT THINKING:</strong>
-                                <p>Maintain human-in-the-loop for asymmetric market intelligence. Let an AI rules engine absorb healthy 85% volume, focusing humans exclusively on 15% volatile anomalies.</p>
+                                <p>Maintain human-in-the-loop for asymmetric market intelligence. Let an AI rules engine absorb 85% volume, focusing humans exclusively on 15% anomalies.</p>
                             </div>
                             <div>
                                 <strong class="text-white block mb-1">IMPACT:</strong>
@@ -280,49 +333,167 @@
             </div>
         </section>
 
-        <!-- TAB 4: EXPERIENCE SECTION -->
+        <!-- TAB 5: EXPERIENCE SECTION -->
         <section id="tab-experience" class="tab-content hidden space-y-8 py-10">
-            <div>
-                <p class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">CAREER JOURNEY</p>
-                <h2 class="text-3xl font-bold text-white">Work Experience (11.5+ Years)</h2>
+            <div class="flex flex-col md:flex-row md:items-end justify-between">
+                <div>
+                    <p class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">CAREER JOURNEY</p>
+                    <h2 class="text-3xl font-bold text-white">Work Experience (11.5+ Years • 4 Companies)</h2>
+                </div>
+                <p class="text-textMuted text-sm mt-2">Swipe horizontally or scroll to review comprehensive company profiles.</p>
             </div>
-            <div class="space-y-6 max-w-4xl">
-                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
-                        <h3 class="text-lg font-bold text-white"> AI Product Manager <span class="text-blue-400 font-normal">@ Stellantis</span></h3>
-                        <span class="text-xs text-textMuted font-semibold mt-1 sm:mt-0">August 2023 - Present</span>
+
+            <!-- Horizontal Slider Container for Experience Cards -->
+            <div class="flex overflow-x-auto space-x-6 pb-6 no-scrollbar snap-x snap-mandatory pt-4">
+                
+                <!-- 1. Stellantis Experience Card -->
+                <div class="min-w-[340px] sm:min-w-[620px] bg-cardBg border border-slate-800 p-8 rounded-2xl snap-start flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-white">AI Product Manager @ Stellantis</h3>
+                            <span class="text-xs bg-blue-500/10 text-blue-400 font-semibold px-2.5 py-1 rounded border border-blue-500/20 mt-1 sm:mt-0">Aug 2023 - Present</span>
+                        </div>
+                        <p class="text-xs text-textMuted mb-4 italic">Enterprise AI Transformations, Multi-Agent Systems & Logistical Optimization</p>
+                        
+                        <div class="space-y-4 text-sm text-textMuted leading-relaxed">
+                            <div>
+                                <span class="text-white font-semibold block mb-1">⚡ Core AI Architecture & Product Execution:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Directed 'Optima Inbound Agents', fusing deterministic MIP route math with LangGraph multi-agent orchestration to collapse an 8-week logistics planning cycle into daily automated runs.</li>
+                                    <li>Spearheaded 'Warranty Claims Clustering' (WCC) using Claude 3.5 + HDBSCAN, replacing manual regex filters to process 17,300+ daily multilingual claims.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-white font-semibold block mb-1">📈 Measurable P&L & Business Impact:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Managed €1B+ inbound transport spend, driving 4.5% structural cost reductions by eliminating deadhead miles and maximizing volumetric fill-rates.</li>
+                                    <li>Compressed defect detection life-cycles from 90 days to &lt;48 hours, averting $4.5M - $8.2M in annual warranty liabilities (&gt;400x ROI).</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-white font-semibold block mb-1">🔒 Governance, Security & FinOps:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Enforced Unity Catalog SP-Only zero-trust security access, eliminating connection pool exhaustion and achieving sub-second query response times.</li>
+                                    <li>Optimized cloud compute OPEX under $1,000/month by engineering strict token budgets, bounded row sampling, and Airflow incremental re-clustering.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="list-disc pl-5 space-y-2 text-sm text-textMuted">
-                        <li>Directed Optima Inbound Agents platform, managing a €1B inbound transport spend and driving a 4.5% structural cost reduction via LangGraph and MIP solvers.</li>
-                        <li>Spearheaded Warranty Claims Clustering (WCC) Engine using Claude 3.5 Sonnet and HDBSCAN, compressing defect discovery from 90 days to 48 hours and averting up to $8.2M in liabilities.</li>
-                        <li>Engineered zero-trust enterprise security pipelines bypassing row-level token delegation for sub-second Databricks SQL execution.</li>
-                    </ul>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-blue-400 font-semibold">Stellantis • Automotive & Supply Chain Domain</div>
                 </div>
 
-                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
-                        <h3 class="text-lg font-bold text-white">Product Manager <span class="text-blue-400 font-normal">@ L&amp;T (Larsen &amp; Toubro)</span></h3>
-                        <span class="text-xs text-textMuted font-semibold mt-1 sm:mt-0">May 2022 - August 2023</span>
+                <!-- 2. Larsen & Toubro Experience Card -->
+                <div class="min-w-[340px] sm:min-w-[620px] bg-cardBg border border-slate-800 p-8 rounded-2xl snap-start flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-white">Product Manager / Lead Data Analyst @ Larsen &amp; Toubro</h3>
+                            <span class="text-xs bg-blue-500/10 text-blue-400 font-semibold px-2.5 py-1 rounded border border-blue-500/20 mt-1 sm:mt-0">May 2022 - Aug 2023</span>
+                        </div>
+                        <p class="text-xs text-textMuted mb-4 italic">Healthcare Automation, Clinical Trials & Financial Data Architectures</p>
+                        
+                        <div class="space-y-4 text-sm text-textMuted leading-relaxed">
+                            <div>
+                                <span class="text-white font-semibold block mb-1">⚡ Core AI Architecture & Product Execution:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Architected 'Clinical Orderset Automation MVP' to convert 500-page clinical trial PDFs into structured EHR ordersets using a 7-way parallel LLM extraction pipeline.</li>
+                                    <li>Designed 'Yield Curve Cleansing' (YCC) AI Platform for Nordea Bank to ingest, normalize, and validate multi-vendor OTC valuation curves during tight trading snaps.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-white font-semibold block mb-1">📈 Measurable P&L & Business Impact:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Slashing pure AI processing time from 140s to ~20s and clinician review time by ≥50% with split-screen RAG grounding snippet traceability.</li>
+                                    <li>Successfully absorbed 85% of baseline OTC curve volume automatically while routing high-risk anomalies for analyst triage without SLA breaches.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-white font-semibold block mb-1">🔒 Governance, Security & FinOps:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Achieved 100% safety gate effectiveness with dual-layer Python dosage validation rules and zero critical failures bypassing review.</li>
+                                    <li>Deployed LLM Reason-Drafting agents enforcing SOC-compliant 'Four-Eyes' override approvals based on historical market precedents.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="list-disc pl-5 space-y-2 text-sm text-textMuted">
-                        <li>Architected Clinical Automation MVP, utilizing 7-way parallel LLM extraction to convert 500-page trial PDFs into EHR datasets in under 5 minutes.</li>
-                        <li>Designed Yield Curve Cleansing (YCC) AI Platform to automate OTC valuation anomaly detection, establishing SOC-compliant AI reasoning pipelines.</li>
-                    </ul>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-blue-400 font-semibold">L&amp;T • Healthcare &amp; Banking Domain</div>
                 </div>
 
-                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
-                        <h3 class="text-lg font-bold text-white">Senior Analytics Consultant <span class="text-blue-400 font-normal">@ NextGenVision Technology</span></h3>
-                        <span class="text-xs text-textMuted font-semibold mt-1 sm:mt-0">October 2017 - April 2022</span>
+                <!-- 3. NextGenVision Technology Experience Card -->
+                <div class="min-w-[340px] sm:min-w-[620px] bg-cardBg border border-slate-800 p-8 rounded-2xl snap-start flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-white">Senior Analytics Consultant @ NextGenVision Technology</h3>
+                            <span class="text-xs bg-blue-500/10 text-blue-400 font-semibold px-2.5 py-1 rounded border border-blue-500/20 mt-1 sm:mt-0">Oct 2017 - Apr 2022</span>
+                        </div>
+                        <p class="text-xs text-textMuted mb-4 italic">Pharma Analytics, Supply Chain Dashboards & Enterprise Data Modeling</p>
+                        
+                        <div class="space-y-4 text-sm text-textMuted leading-relaxed">
+                            <div>
+                                <span class="text-white font-semibold block mb-1">⚡ Core AI Architecture & Product Execution:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Consulted for Takeda Pharmaceutical, analyzing and visualizing massive enterprise datasets in Power BI and Snowflake schema architectures.</li>
+                                    <li>Managed client accounts for Dunzo, performing exploratory data profiling to uncover customer purchasing behavior and power targeted campaigns.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-white font-semibold block mb-1">📈 Measurable P&L & Business Impact:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Delivered data-backed insights that directly increased corporate revenue and optimized operational supply chain efficiency.</li>
+                                    <li>Created comprehensive monthly operational scorecards and knowledge bases, dramatically improving customer issue resolution times.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-white font-semibold block mb-1">🔒 Governance, Security & FinOps:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Authored complete Business Requirement Documents (BRDs), functional specs, User Stories, and Use Cases as a seasoned Business Analyst.</li>
+                                    <li>Mentored junior analysts, managed offshore-onshore task allocation, and ensured strict data governance and cleansing protocols.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="list-disc pl-5 space-y-2 text-sm text-textMuted">
-                        <li>Led data modeling and revenue optimization dashboards for Takeda Pharmaceutical leveraging Snowflake schema architectures and Power BI.</li>
-                    </ul>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-blue-400 font-semibold">NextGenVision • Pharma & Retail Supply Chain Domain</div>
                 </div>
+
+                <!-- 4. Accenture Private Limited Experience Card -->
+                <div class="min-w-[340px] sm:min-w-[620px] bg-cardBg border border-slate-800 p-8 rounded-2xl snap-start flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-white">Software Engineer Analyst @ Accenture Private Limited</h3>
+                            <span class="text-xs bg-blue-500/10 text-blue-400 font-semibold px-2.5 py-1 rounded border border-blue-500/20 mt-1 sm:mt-0">May 2012 - Dec 2014</span>
+                        </div>
+                        <p class="text-xs text-textMuted mb-4 italic">Barclays Financial Systems, Production Operations & Payment Gateway Support</p>
+                        
+                        <div class="space-y-4 text-sm text-textMuted leading-relaxed">
+                            <div>
+                                <span class="text-white font-semibold block mb-1">⚡ Core AI Architecture & Product Execution:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Managed application maintenance and critical code enhancements for Barclays Cards, payment schemes, and acquiring business operations.</li>
+                                    <li>Monitored high-volume production batch workflows using TWS, Control-M, and HAAS coordinators to prevent customer-impacting anomalies.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-white font-semibold block mb-1">📈 Measurable P&L & Business Impact:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Presented weekly and monthly application performance reviews and SLA adherence metrics directly to international stakeholders and clients.</li>
+                                    <li>Streamlined enterprise defect resolution protocols and authored comprehensive Root Cause Analysis (RCA) reports.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-white font-semibold block mb-1">🔒 Governance, Security & FinOps:</span>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Introduced structured ITIL workflows for new user functionality requests across requirements gathering, coding, and testing cycles.</li>
+                                    <li>Received multiple 'Celebrating Performance Points' monetary awards for exemplary project stability and operational excellence.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-blue-400 font-semibold">Accenture • Banking & Financial Services Domain</div>
+                </div>
+
             </div>
         </section>
 
-        <!-- TAB 5: IMPACT (WHY HIRE ME) -->
+        <!-- TAB 6: IMPACT (WHY HIRE ME) -->
         <section id="tab-impact" class="tab-content hidden space-y-8 py-10">
             <div>
                 <p class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">WHY HIRE ME</p>
@@ -332,7 +503,7 @@
                 <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-3">
                     <div class="text-blue-400 text-2xl"><i class="fas fa-bolt"></i></div>
                     <h3 class="text-lg font-bold text-white">Product + Technical Fluency</h3>
-                    <p class="text-textMuted text-sm leading-relaxed">I speak both product and engineering. From writing user stories to debugging Databricks SQL queries and tuning multi-agent LangGraph flows, I close the gap between ideas and execution.</p>
+                    <p class="text-textMuted text-sm leading-relaxed">I speak both product and engineering. From writing BRDs/User Stories to debugging Databricks SQL queries and tuning multi-agent LangGraph flows, I close the gap between ideas and execution.</p>
                 </div>
 
                 <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-3">
@@ -344,47 +515,79 @@
                 <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-3">
                     <div class="text-amber-400 text-2xl"><i class="fas fa-landmark"></i></div>
                     <h3 class="text-lg font-bold text-white">Enterprise Systems Depth</h3>
-                    <p class="text-textMuted text-sm leading-relaxed">Working across global supply chain logistics, automotive quality, clinical trial automation, and OTC valuation pipelines gives me fluency in high-stakes domain complexity.</p>
+                    <p class="text-textMuted text-sm leading-relaxed">Working across global supply chain logistics, automotive quality, clinical trial automation, and financial payment/valuation pipelines gives me high-stakes domain depth.</p>
                 </div>
 
                 <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-3">
                     <div class="text-indigo-400 text-2xl"><i class="fas fa-diagram-project"></i></div>
                     <h3 class="text-lg font-bold text-white">Cross-functional Coordination</h3>
-                    <p class="text-textMuted text-sm leading-relaxed">Serving as the bridge between executive leadership, engineering pods, and business stakeholders, aligning competing priorities into shared, high-velocity execution.</p>
+                    <p class="text-textMuted text-sm leading-relaxed">Serving as the bridge between executive leadership, engineering pods, and business stakeholders, aligning competing priorities into shared execution.</p>
                 </div>
 
                 <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-3">
                     <div class="text-rose-400 text-2xl"><i class="fas fa-layer-group"></i></div>
-                    <h3 class="text-lg font-bold text-white">Structured Execution</h3>
-                    <p class="text-textMuted text-sm leading-relaxed">From building Golden Dataset CI/CD gates to designing RICE frameworks, I bring discipline to ambiguity. Structured thinking is how I reduce friction and deliver faster.</p>
+                    <h3 class="text-lg font-bold text-white">Structured Governance</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">From building CI/CD gates and zero-trust security models to enforcing SOC audit trails, I bring structure and reliability to complex AI workflows.</p>
                 </div>
 
                 <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-3">
                     <div class="text-sky-400 text-2xl"><i class="fas fa-globe"></i></div>
-                    <h3 class="text-lg font-bold text-white">Global Perspective</h3>
-                    <p class="text-textMuted text-sm leading-relaxed">Proven experience working with distributed international teams across time zones and complex enterprise client landscapes. Ready to contribute from day one.</p>
+                    <h3 class="text-lg font-bold text-white">Global Experience</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Over 11.5+ years of experience collaborating with global onshore/offshore teams across time zones and complex multinational enterprise client landscapes.</p>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 6: BEYOND WORK -->
-        <section id="tab-beyond" class="tab-content hidden space-y-8 py-10">
+        <!-- TAB 7: CERTIFICATIONS & TRAINING SECTION -->
+        <section id="tab-certifications" class="tab-content hidden space-y-8 py-10">
             <div>
-                <p class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">PERSONAL INTERESTS</p>
-                <h2 class="text-3xl font-bold text-white">Beyond Work</h2>
+                <p class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">CREDENTIALS & COURSES</p>
+                <h2 class="text-3xl font-bold text-white">Certifications & Professional Training</h2>
             </div>
-            <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-4 max-w-3xl">
-                <p class="text-textMuted text-base leading-relaxed">
-                    Beyond building enterprise AI products, I actively follow financial markets and equity trends. I am passionate about mentoring emerging product professionals and continuously exploring agentic AI architectures, RICE prioritization frameworks, and cloud security integrations.
-                </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-3">
+                    <div class="text-blue-400 text-2xl"><i class="fas fa-award"></i></div>
+                    <h3 class="text-lg font-bold text-white">Microsoft AI Product Manager Certification</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Specialized training and certification focusing on generative AI lifecycle management, cognitive services, and enterprise AI deployment frameworks.</p>
+                    <div class="pt-2">
+                        <span class="text-xs bg-blue-500/10 text-blue-400 px-3 py-1 rounded border border-blue-500/20 font-medium">Verified Credential</span>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-3">
+                    <div class="text-emerald-400 text-2xl"><i class="fas fa-award"></i></div>
+                    <h3 class="text-lg font-bold text-white">Google AI & Machine Learning Specialization</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Comprehensive coursework covering advanced ML pipelines, data modeling, neural network architectures, and cloud-scale analytics.</p>
+                    <div class="pt-2">
+                        <span class="text-xs bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded border border-emerald-500/20 font-medium">Specialization Credential</span>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-3">
+                    <div class="text-amber-400 text-2xl"><i class="fas fa-certificate"></i></div>
+                    <h3 class="text-lg font-bold text-white">Advanced Data Analytics & Agile Frameworks</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Advanced certifications in enterprise data warehousing, Snowflake architecture, Scrum leadership, and stakeholder management.</p>
+                    <div class="pt-2">
+                        <span class="text-xs bg-amber-500/10 text-amber-400 px-3 py-1 rounded border border-amber-500/20 font-medium">Professional Training</span>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl space-y-3">
+                    <div class="text-purple-400 text-2xl"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="text-lg font-bold text-white">MBA in Business Analytics & B.Tech IT</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Formal academic degrees combining rigorous analytical foundations with core computer science and information technology engineering.</p>
+                    <div class="pt-2">
+                        <span class="text-xs bg-purple-500/10 text-purple-400 px-3 py-1 rounded border border-purple-500/20 font-medium">Academic Degrees</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- TAB 7: CONTACT SECTION -->
+        <!-- TAB 8: CONTACT SECTION -->
         <section id="tab-contact" class="tab-content hidden space-y-8 py-10">
             <div class="bg-gradient-to-r from-blue-900/20 to-indigo-900/20 border border-blue-500/20 p-12 rounded-3xl text-center space-y-6 max-w-3xl mx-auto">
                 <h2 class="text-3xl font-extrabold text-white">Let's Connect</h2>
-                <p class="text-textMuted max-w-xl mx-auto text-sm">Open for Senior AI Product Manager roles. Reach out via email or connect with me directly on LinkedIn.</p>
+                <p class="text-textMuted max-w-xl mx-auto text-sm">Open for AI Product Manager roles in Bangalore and across India. Reach out via email or connect with me directly on LinkedIn.</p>
                 <div class="flex justify-center gap-4 pt-2">
                     <a href="mailto:ankitraj.sbg@email.com" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl transition shadow-lg shadow-blue-500/20">Email Me</a>
                     <a href="https://www.linkedin.com/in/ankit-raj-5a5387287/" target="_blank" class="border border-slate-700 hover:border-slate-500 text-white font-semibold px-6 py-3 rounded-xl transition">LinkedIn Profile</a>
@@ -396,12 +599,11 @@
 
     <!-- FOOTER -->
     <footer class="py-8 px-6 text-center text-xs text-textMuted border-t border-slate-900">
-        <p>&copy; 2026 Ankit Raj. Senior AI Product Manager Portfolio.</p>
+        <p>&copy; 2026 Ankit Raj. AI Product Manager Portfolio.</p>
     </footer>
 
-    <!-- JAVASCRIPT FOR TABS & CALM NATIVE AI VOICE -->
+    <!-- JAVASCRIPT FOR TABS & NATIVE AI VOICE -->
     <script>
-        // Tab switching function
         function switchTab(tabId) {
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.add('hidden'));
@@ -418,7 +620,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Calm Executive Native AI Voice Function
         function playCalmVoice() {
             if ('speechSynthesis' in window) {
                 const voiceBtnText = document.getElementById('voice-text');
@@ -429,15 +630,13 @@
                     return;
                 }
 
-                const speechText = "Welcome to Ankit Raj's portfolio. Senior AI Product Manager with over 11.5 years of experience leading multi-agent architectures, optimization engines, and enterprise platforms.";
+                const speechText = "Welcome to Ankit Raj's portfolio. AI Product Manager with over 11.5 years of experience leading multi-agent architectures, enterprise transformations, and decision optimization platforms.";
                 const utterance = new SpeechSynthesisUtterance(speechText);
                 
-                // Configure speech parameters for calm, natural tone
-                utterance.rate = 0.92;  // Slightly slower for composure
-                utterance.pitch = 0.95; // Balanced depth
+                utterance.rate = 0.92;
+                utterance.pitch = 0.95;
                 utterance.volume = 1.0;
 
-                // Select a high quality English voice available in system
                 const voices = window.speechSynthesis.getVoices();
                 const preferredVoice = voices.find(v => (v.lang.includes('en-US') || v.lang.includes('en-GB')) && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Daniel') || v.name.includes('Alex')));
                 
@@ -445,17 +644,9 @@
                     utterance.voice = preferredVoice;
                 }
 
-                utterance.onstart = function() {
-                    voiceBtnText.innerText = "Speaking...";
-                };
-
-                utterance.onend = function() {
-                    voiceBtnText.innerText = "AI Voice";
-                };
-
-                utterance.onerror = function() {
-                    voiceBtnText.innerText = "AI Voice";
-                };
+                utterance.onstart = () => voiceBtnText.innerText = "Speaking...";
+                utterance.onend = () => voiceBtnText.innerText = "AI Voice";
+                utterance.onerror = () => voiceBtnText.innerText = "AI Voice";
 
                 window.speechSynthesis.speak(utterance);
             } else {
@@ -463,7 +654,6 @@
             }
         }
 
-        // Pre-load browser voices
         if ('speechSynthesis' in window) {
             window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
         }
